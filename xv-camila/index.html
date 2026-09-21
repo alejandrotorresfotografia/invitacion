@@ -1,1 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mis XV Años - Camila Hernández</title>
+  
+  <!-- Open Graph para vista previa en WhatsApp, Facebook, etc. -->
+  <meta property="og:title" content="Mis XV Años - Camila Hernández">
+  <meta property="og:description" content="Antonio Hernández y Jessica Gallardo cordialmente los invitan a celebrar los XV años de su hija Camila Hernández. Sábado 24 de Octubre de 2026.">
+  <meta property="og:image" content="img/0N1A7221.JPG">
+  <meta property="og:type" content="website">
 
+  <!-- Google Fonts: Caligrafía fina, Playfair Serif y Montserrat Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Pantalla de Bienvenida: Sobre Realista Interactivo (Apertura 3D) -->
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="envelope-wrapper" id="envelopeWrapper">
+      
+      <!-- Sobre físico -->
+      <div class="envelope">
+        <!-- Solapa superior con rotación 3D -->
+        <div class="envelope-flap" id="envelopeFlap"></div>
+        
+        <!-- Bolsillo frontal del sobre -->
+        <div class="envelope-pocket"></div>
+
+        <!-- Sello de cera pulsante con monograma XV -->
+        <div class="envelope-seal" id="envelopeSeal">
+          <span>XV</span>
+        </div>
+
+        <!-- Carta interior que sube suavemente sin letras giratorias -->
+        <div class="envelope-letter" id="envelopeLetter">
+          <p class="letter-top">Save the Date</p>
+          <h2 class="letter-title">Camila</h2>
+          <p class="letter-subtitle">Hernández</p>
+          <div class="letter-line"></div>
+          <p class="letter-date">24 . OCTUBRE . 2026</p>
+        </div>
+      </div>
+
+      <!-- Botón de apertura visible -->
+      <div class="envelope-action-bar">
+        <button class="open-invitation-btn" id="openInvitationBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+          </svg>
+          Abrir Sobre e Invitación
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Destellos dorados animados -->
+  <div class="sparkles-container"></div>
+
+  <!-- Botón flotante para música -->
+  <button class="audio-control" id="musicToggle" title="Reproducir música" aria-label="Control de música">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+  </button>
+  <audio id="bgAudio" loop preload="auto">
+    <!-- Vals / Melodía de piano suave y elegante -->
+    <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=piano-moment-9835.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="main-wrapper">
+    <!-- Orlados ornamentales en las esquinas -->
+    <div class="corner-ornament top-left"></div>
+    <div class="corner-ornament top-right"></div>
+    <div class="corner-ornament bottom-left"></div>
+    <div class="corner-ornament bottom-right"></div>
+    
+    <!-- 1. HERO ESTILO "SAVE THE DATE" EDITORIAL CON FOTO INTEGRADA -->
+    <section class="hero-savethedate reveal">
+      <img src="img/0N1A7221.JPG" alt="Camila Hernández Quinceañera" class="hero-savethedate-bg" loading="eager">
+      <div class="hero-savethedate-overlay"></div>
+      
+      <div class="hero-savethedate-content">
+        <div class="std-top">
+          <span class="std-tag">Save the Date</span>
+        </div>
+
+        <div class="std-bottom">
+          <p class="std-xv">Mis XV Años</p>
+          <h1 class="std-name">Camila</h1>
+          <h2 class="std-lastname">Hernández</h2>
+          
+          <div class="ornament-flourish" style="color: #f7ede2; margin-top: 10px;">
+            <svg viewBox="0 0 100 20" class="flourish-svg">
+              <path d="M0,10 Q25,0 50,10 Q75,20 100,10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="50" cy="10" r="3" fill="currentColor"/>
+              <circle cx="40" cy="10" r="2" fill="currentColor"/>
+              <circle cx="60" cy="10" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. INVITACIÓN DE LOS PADRES -->
+    <section class="parents-section reveal">
+      <div class="invitation-quote-box">
+        <div class="quote-corner qc-tl"></div>
+        <div class="quote-corner qc-tr"></div>
+        <div class="quote-corner qc-bl"></div>
+        <div class="quote-corner qc-br"></div>
+        
+        <p class="parents-intro">
+          <span class="parents-names-highlight">Antonio Hernández & Jessica Gallardo</span>
+          cordialmente los invitan a celebrar los XV años de su querida hija
+          <span class="parents-names-highlight" style="color: var(--color-bronze); font-size: 1.3rem;">Camila Hernández</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. CUENTA REGRESIVA & FECHA -->
+    <section class="countdown-section reveal">
+      <div class="date-badge">
+        <span class="day-text">Sábado</span>
+        <span class="date-number">24</span>
+        <div class="date-month-year">
+          <span class="date-month">Octubre</span>
+          <span class="date-year">2026</span>
+        </div>
+      </div>
+
+      <p style="font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; color: var(--color-muted); margin-bottom: 20px;">Faltan solo:</p>
+
+      <div class="countdown-grid">
+        <div class="timer-box">
+          <div class="timer-value" id="timer-days">00</div>
+          <div class="timer-label">Días</div>
+        </div>
+        <div class="timer-box">
+          <div class="timer-value" id="timer-hours">00</div>
+          <div class="timer-label">Horas</div>
+        </div>
+        <div class="timer-box">
+          <div class="timer-value" id="timer-minutes">00</div>
+          <div class="timer-label">Min</div>
+        </div>
+        <div class="timer-box">
+          <div class="timer-value" id="timer-seconds">00</div>
+          <div class="timer-label">Seg</div>
+        </div>
+      </div>
+
+      <div style="margin-top: 25px;">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+A%C3%B1os+-+Camila+Hern%C3%A1ndez&dates=20261025T030000Z/20261025T080000Z&details=Celebraci%C3%B3n+de+los+XV+A%C3%B1os+de+Camila+Hern%C3%A1ndez.+9:00+p.m.+en+Sal%C3%B3n+Usos+M%C3%BAltiples,+Colonia+Panamericana.&location=Sal%C3%B3n+Usos+M%C3%BAltiples,+Colonia+Panamericana" target="_blank" class="btn-secondary" style="font-size: 0.85rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          Agendar en Google Calendar
+        </a>
+      </div>
+    </section>
+
+    <!-- 4. LUGAR / RECEPCIÓN -->
+    <section class="events-section reveal">
+      <div class="event-card reveal">
+        <div class="event-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 22h8M12 11v11M19 3l-7 8-7-8h14z"></path>
+          </svg>
+        </div>
+        <h3 class="event-title">Recepción</h3>
+        <span class="event-time">9:00 p.m.</span>
+        <p class="event-place">Salón Usos Múltiples</p>
+        <p class="event-address">Colonia Panamericana</p>
+        
+        <a href="https://www.google.com/maps/search/?api=1&query=Salon+Usos+Multiples+Colonia+Panamericana" target="_blank" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+          </svg>
+          Ver en Google Maps
+        </a>
+      </div>
+
+      <!-- NOTA ESPECIAL DE BRINDIS / BEBIDA -->
+      <div class="toast-notice-box reveal">
+        <div class="toast-icon">🥂</div>
+        <h4 class="toast-title">¡Brinda con nosotros!</h4>
+        <p class="toast-desc">
+          “Lleva tu bebida preferida y celebra junto a nosotros esta noche tan especial.”
+        </p>
+      </div>
+    </section>
+
+    <!-- 5. CONFIRMACIÓN DE ASISTENCIA (RSVP) -->
+    <section class="rsvp-section reveal">
+      <div class="rsvp-box">
+        <div style="font-size: 2.2rem; margin-bottom: 10px;">💌</div>
+        <h3>Confirmación de Asistencia</h3>
+        <p>“Esperamos contar con tu asistencia. Por favor, confírmanos tu lugar para esperarte con mucho cariño.”</p>
+        
+        <button id="openModalBtn" class="btn-primary btn-whatsapp" style="max-width: 320px; font-size: 1rem;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          Confirmar por WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p class="footer-quote">¡Te esperamos!</p>
+      <p style="font-family: var(--font-serif); font-size: 1rem; color: var(--color-muted); margin-bottom: 20px;">Tu presencia hará este día inolvidable</p>
+      <p class="footer-credits">
+        Fotografía y Diseño Web por <a href="https://instagram.com/alejandrotorresfotografia" target="_blank">Alejandro Torres Fotografía</a>
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- MODAL DE CONFIRMACIÓN -->
+  <div class="modal" id="rsvpModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--color-bronze-dark); margin-bottom: 8px;">Confirmar Asistencia</h3>
+      <p style="font-size: 0.9rem; color: var(--color-muted);">Completa tus datos para enviar un mensaje automático por WhatsApp:</p>
+      
+      <form class="modal-form" id="rsvpForm">
+        <label for="guestName">Nombre(s) completo(s):</label>
+        <input type="text" id="guestName" placeholder="Ej. Familia González / Carlos Mendoza" required>
+
+        <label for="guestAttendance">¿Podrás asistir?</label>
+        <select id="guestAttendance">
+          <option value="Sí, asistiré">¡Sí, con mucho gusto asistiré!</option>
+          <option value="No podré asistir">Lamentablemente no podré asistir</option>
+        </select>
+
+        <label for="guestCount">Número de pases confirmados:</label>
+        <select id="guestCount">
+          <option value="1 persona">1 persona</option>
+          <option value="2 personas" selected>2 personas</option>
+          <option value="3 personas">3 personas</option>
+          <option value="4 personas">4 personas</option>
+          <option value="5 personas">5 personas</option>
+          <option value="Familia completa">Familia completa</option>
+        </select>
+
+        <label for="guestNote">Mensaje para Camila (opcional):</label>
+        <input type="text" id="guestNote" placeholder="¡Muchas felicidades Camila!">
+
+        <button type="submit" class="btn-primary btn-whatsapp" style="width: 100%; max-width: 100%; margin-top: 20px;">
+          Enviar Confirmación a WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
