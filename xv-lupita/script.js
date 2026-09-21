@@ -155,8 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const guestCount = document.getElementById('guestCount').value;
       const guestNote = document.getElementById('guestNote').value.trim();
 
-      // Número de WhatsApp al que llegará la confirmación (se puede cambiar)
-      const phoneNumber = "526391234567"; // Número base predeterminado o editable
+      // Número de WhatsApp para confirmaciones
+      const phoneNumber = "526393989687";
 
       let message = `¡Hola! Confirmo mi respuesta para los XV de Lupita García Hidalgo:\n\n`;
       message += `👤 *Nombre:* ${guestName}\n`;
