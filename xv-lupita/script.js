@@ -159,13 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const phoneNumber = "526393989687";
 
       let message = `¡Hola! Confirmo mi respuesta para los XV de Lupita García Hidalgo:\n\n`;
-      message += `👤 *Nombre:* ${guestName}\n`;
-      message += `💌 *Asistencia:* ${attendance}\n`;
+      message += `• *Nombre:* ${guestName}\n`;
+      message += `• *Asistencia:* ${attendance}\n`;
       if (attendance === 'Sí, asistiré') {
-        message += `👥 *Pases que confirmo:* ${guestCount}\n`;
+        message += `• *Pases que confirmo:* ${guestCount}\n`;
       }
       if (guestNote) {
-        message += `✨ *Mensaje:* ${guestNote}\n`;
+        message += `• *Mensaje:* ${guestNote}\n`;
       }
 
       const encodedUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
