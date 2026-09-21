@@ -668,14 +668,13 @@ section {
   font-weight: 600;
 }
 
-/* ==========================================================================
-   TARJETA DE RECEPCIÓN & UBICACIÓN
-   ========================================================================== */
+/* TARJETA DE RECEPCIÓN & UBICACIÓN */
 .event-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 34px 24px;
-  margin-bottom: 24px;
+  padding: 34px 24px 28px;
+  margin-top: 36px;
+  margin-bottom: 26px;
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-soft);
   position: relative;
@@ -693,7 +692,7 @@ section {
 .event-icon-wrap {
   width: 64px;
   height: 64px;
-  margin: -50px auto 16px;
+  margin: -58px auto 16px;
   background: linear-gradient(135deg, #ffffff, var(--color-sand));
   border-radius: 50%;
   display: flex;
