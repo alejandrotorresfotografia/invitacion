@@ -290,7 +290,7 @@ body {
   box-shadow: 0 10px 28px rgba(184, 107, 107, 0.45);
 }
 
-/* Contenedor central optimizado para móviles */
+/* Contenedor central optimizado para móviles con textura de papel suave y marco de filigrana */
 .main-wrapper {
   max-width: 520px;
   margin: 0 auto;
@@ -299,7 +299,102 @@ body {
   min-height: 100vh;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
   overflow: hidden;
+  border-left: 2px solid rgba(217, 155, 155, 0.2);
+  border-right: 2px solid rgba(217, 155, 155, 0.2);
 }
+
+/* Orlados ornamentales en las esquinas del diseño */
+.corner-ornament {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  z-index: 8;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.75;
+}
+
+.corner-ornament.top-left {
+  top: 10px;
+  left: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23c98a88' stroke-width='3'%3E%3Cpath d='M10,90 Q10,10 90,10'/%3E%3Cpath d='M20,90 Q20,20 90,20' stroke-width='1.5'/%3E%3Ccircle cx='10' cy='10' r='5' fill='%23c98a88'/%3E%3Cpath d='M35,35 Q15,15 15,35 Q15,15 35,15' fill='%23e2a8a6'/%3E%3C/svg%3E");
+}
+
+.corner-ornament.top-right {
+  top: 10px;
+  right: 10px;
+  transform: scaleX(-1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23c98a88' stroke-width='3'%3E%3Cpath d='M10,90 Q10,10 90,10'/%3E%3Cpath d='M20,90 Q20,20 90,20' stroke-width='1.5'/%3E%3Ccircle cx='10' cy='10' r='5' fill='%23c98a88'/%3E%3C/svg%3E");
+}
+
+.corner-ornament.bottom-left {
+  bottom: 10px;
+  left: 10px;
+  transform: scaleY(-1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23c98a88' stroke-width='3'%3E%3Cpath d='M10,90 Q10,10 90,10'/%3E%3Cpath d='M20,90 Q20,20 90,20' stroke-width='1.5'/%3E%3Ccircle cx='10' cy='10' r='5' fill='%23c98a88'/%3E%3C/svg%3E");
+}
+
+.corner-ornament.bottom-right {
+  bottom: 10px;
+  right: 10px;
+  transform: scale(-1, -1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none' stroke='%23c98a88' stroke-width='3'%3E%3Cpath d='M10,90 Q10,10 90,10'/%3E%3Cpath d='M20,90 Q20,20 90,20' stroke-width='1.5'/%3E%3Ccircle cx='10' cy='10' r='5' fill='%23c98a88'/%3E%3C/svg%3E");
+}
+
+/* Corona y acentos barrocos */
+.ornament-crown {
+  color: var(--color-blush-dark);
+  margin-bottom: 6px;
+  display: inline-block;
+  opacity: 0.85;
+}
+
+.ornament-flourish {
+  max-width: 140px;
+  margin: 15px auto;
+  color: var(--color-blush);
+}
+
+.flourish-svg {
+  width: 100%;
+  height: auto;
+}
+
+.ornament-cross {
+  font-size: 1.5rem;
+  color: var(--color-blush-dark);
+  margin-bottom: 6px;
+}
+
+.ornament-ampersand {
+  font-family: var(--font-script);
+  font-size: 2.2rem;
+  color: var(--color-blush);
+  line-height: 0.8;
+  display: inline-block;
+}
+
+/* Caja de cita con marco vintage y esquinas decoradas */
+.quote-box.vintage-border {
+  border: 1px solid var(--color-blush);
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(184, 107, 107, 0.08);
+}
+
+.quote-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--color-blush-dark);
+  border-style: solid;
+}
+
+.qc-tl { top: -2px; left: -2px; border-width: 3px 0 0 3px; }
+.qc-tr { top: -2px; right: -2px; border-width: 3px 3px 0 0; }
+.qc-bl { bottom: -2px; left: -2px; border-width: 0 0 3px 3px; }
+.qc-br { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; }
 
 /* Botón flotante de música */
 .audio-control {
@@ -627,17 +722,20 @@ section {
 .event-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 30px 24px;
+  padding: 32px 24px;
   margin-bottom: 28px;
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-soft);
   position: relative;
   text-align: center;
   transition: transform 0.3s ease;
+  outline: 1px dashed rgba(217, 155, 155, 0.4);
+  outline-offset: -8px;
 }
 
 .event-card:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
 }
 
 .event-icon-wrap {

@@ -74,14 +74,24 @@
   </audio>
 
   <div class="main-wrapper">
+    <!-- Orlados ornamentales en las esquinas del diseño -->
+    <div class="corner-ornament top-left"></div>
+    <div class="corner-ornament top-right"></div>
+    <div class="corner-ornament bottom-left"></div>
+    <div class="corner-ornament bottom-right"></div>
     
     <!-- 1. HERO / PORTADA -->
     <section class="hero reveal">
+      <div class="ornament-crown">
+        <svg width="40" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+        </svg>
+      </div>
       <p class="hero-sub">Mis XV Años</p>
       <h1 class="hero-name">Lupita</h1>
       <h2 class="hero-lastname">García Hidalgo</h2>
 
-      <!-- Marco de Foto Principal con Badge -->
+      <!-- Marco de Foto Principal con Badge y Detalles Florales -->
       <div class="hero-image-frame">
         <div class="hero-image-inner">
           <img src="img/1.jpeg" alt="Lupita García Hidalgo Quinceañera" loading="eager">
@@ -89,23 +99,31 @@
         <div class="photo-badge">Un nuevo comienzo ♡</div>
       </div>
 
-      <div class="section-divider">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      <div class="ornament-flourish">
+        <svg viewBox="0 0 100 20" class="flourish-svg">
+          <path d="M0,10 Q25,0 50,10 Q75,20 100,10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="50" cy="10" r="3" fill="currentColor"/>
+          <circle cx="40" cy="10" r="2" fill="currentColor"/>
+          <circle cx="60" cy="10" r="2" fill="currentColor"/>
         </svg>
       </div>
     </section>
 
     <!-- 2. PADRES Y MENSAJE EMOTIVO -->
     <section class="parents-section reveal">
+      <div class="ornament-cross">✝</div>
       <p class="blessing-text">Con la bendición de Dios y el amor de mis Padres:</p>
       <div class="parents-names">
         Gerardo García Soto<br>
-        &<br>
+        <span class="ornament-ampersand">&</span><br>
         Juanis Hidalgo Tapia
       </div>
 
-      <div class="quote-box">
+      <div class="quote-box vintage-border">
+        <div class="quote-corner qc-tl"></div>
+        <div class="quote-corner qc-tr"></div>
+        <div class="quote-corner qc-bl"></div>
+        <div class="quote-corner qc-br"></div>
         <p>“Hay momentos inolvidables que se atesoran en el corazón para siempre, por esta razón quiero que compartas conmigo este día tan especial.”</p>
       </div>
     </section>
