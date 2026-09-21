@@ -111,10 +111,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (openInvitationBtn && welcomeScreen) {
-    openInvitationBtn.addEventListener('click', () => {
-      welcomeScreen.classList.add('hidden');
-      playMusic();
+  const envelopeWrapper = document.getElementById('envelopeWrapper');
+  let hasOpened = false;
+
+  function triggerOpenSequence() {
+    if (hasOpened) return;
+    hasOpened = true;
+
+    // 1. Iniciar la música inmediatamente con la interacción del usuario
+    playMusic();
+
+    // 2. Activar la animación de apertura del sobre (solapa se gira y carta sube)
+    if (envelopeWrapper) {
+      envelopeWrapper.classList.add('opening');
+    }
+
+    // 3. Después de disfrutar la animación (1.3 segundos), desvanecer el sobre para entrar a la página
+    setTimeout(() => {
+      if (welcomeScreen) {
+        welcomeScreen.classList.add('hidden');
+      }
+    }, 1350);
+  }
+
+  if (openInvitationBtn) {
+    openInvitationBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      triggerOpenSequence();
+    });
+  }
+
+  if (envelopeWrapper) {
+    envelopeWrapper.addEventListener('click', () => {
+      triggerOpenSequence();
     });
   }
 
