@@ -236,14 +236,7 @@ body {
   color: var(--color-dark);
 }
 
-.letter-tap-hint {
-  display: inline-block;
-  margin-top: 8px;
-  font-family: var(--font-script);
-  font-size: 1.2rem;
-  color: var(--color-blush);
-  animation: pulseRotate 2s infinite ease-in-out;
-}
+
 
 /* ==========================================================================
    ESTADO ANIMADO: CUANDO SE ABRE EL SOBRE
