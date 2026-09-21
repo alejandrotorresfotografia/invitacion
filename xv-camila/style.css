@@ -17,6 +17,7 @@
   --color-border: rgba(140, 83, 56, 0.25);
   
   --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Cinzel', 'Playfair Display', Georgia, serif;
   --font-script: 'Great Vibes', 'Alex Brush', cursive;
   --font-sans: 'Montserrat', sans-serif;
   
@@ -341,12 +342,12 @@ body {
    ========================================================================== */
 .hero-savethedate {
   position: relative;
-  min-height: 580px;
+  min-height: 660px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px 20px 40px;
+  padding: 30px 16px 36px;
   background: #deb89b;
   overflow: hidden;
 }
@@ -403,36 +404,62 @@ body {
 }
 
 .std-bottom {
-  margin-top: 320px;
+  margin-top: 360px;
   text-align: center;
+  padding: 0 10px;
+}
+
+/* Tarjeta elegante de cristal satinado para enmarcar el texto con armonía */
+.std-card-glass {
+  background: rgba(39, 26, 20, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 24px 20px 20px;
+  border: 1px solid rgba(223, 194, 133, 0.35);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .std-xv {
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  letter-spacing: 4px;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--color-gold-soft);
-  margin-bottom: -5px;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .std-name {
   font-family: var(--font-script);
-  font-size: 4.8rem;
-  line-height: 1;
+  font-size: 4.2rem;
+  line-height: 1.15;
   color: #ffffff;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-  margin-bottom: 4px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 4px 0;
 }
 
 .std-lastname {
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  letter-spacing: 4px;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 6px;
   text-transform: uppercase;
-  color: #ebd7c3;
+  color: #f7ede2;
   font-weight: 600;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.std-date-hint {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 4px;
+  color: var(--color-gold-soft);
+  margin-top: 12px;
+  opacity: 0.9;
 }
 
 /* ==========================================================================
