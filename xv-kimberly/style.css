@@ -487,20 +487,23 @@ section {
   text-align: center;
 }
 
-/* Frase emotiva */
-.parents-section {
+/* ==========================================================================
+   SECCIÓN PADRES Y PADRINOS
+   ========================================================================== */
+.family-section {
   background: #ffffff;
-  padding: 34px 24px;
+  padding: 38px 24px;
   border-bottom: 1px solid var(--color-border);
 }
 
-.invitation-quote-box {
+.family-quote-box {
   background: #fff8f8;
-  border-radius: 16px;
-  padding: 24px 20px;
+  border-radius: 18px;
+  padding: 30px 22px;
   border: 1px solid var(--color-border);
   position: relative;
   box-shadow: var(--shadow-soft);
+  text-align: center;
 }
 
 .quote-corner {
@@ -516,11 +519,69 @@ section {
 .qc-bl { bottom: -2px; left: -2px; border-width: 0 0 3px 3px; }
 .qc-br { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; }
 
-.parents-intro {
+.blessing-header {
   font-family: var(--font-serif);
   font-size: 1.15rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.family-block {
+  margin: 14px 0;
+}
+
+.family-role {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.family-names {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--color-red-dark);
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.family-ampersand {
+  font-family: var(--font-script);
+  font-size: 1.8rem;
+  color: var(--color-red-primary);
+  line-height: 0.8;
+  display: inline-block;
+  font-weight: normal;
+}
+
+.family-divider {
+  margin: 16px auto;
+  color: var(--color-gold);
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.quote-divider-line {
+  width: 60px;
+  height: 1px;
+  background: var(--color-border);
+  margin: 22px auto 16px;
+}
+
+.family-message {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
   color: var(--color-dark);
-  line-height: 1.7;
+  line-height: 1.6;
   font-style: italic;
 }
 

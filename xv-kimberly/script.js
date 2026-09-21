@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Teléfono de confirmación (Mamá Lucy Canedo: 6144746981)
       const phoneNumber = "526144746981";
 
-      let message = `¡Hola! Confirmo mi respuesta para los XV de Kimberly Anyeli González Canedo:\n\n`;
+      let message = `¡Hola! Confirmo mi respuesta para los XV de Kimberly González Canedo:\n\n`;
       message += `• *Nombre:* ${guestName}\n`;
       message += `• *Asistencia:* ${attendance}\n`;
       if (attendance === 'Sí, asistiré') {
