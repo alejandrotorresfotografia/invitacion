@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitaciones Digitales - Alejandro Torres Fotografía</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #141214;
+      color: #f7f5f7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 40px 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      color: #e5cfb3;
+      margin-bottom: 8px;
+    }
+    p.sub {
+      font-size: 0.9rem;
+      color: #a89f9a;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+    .cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .card-link:hover {
+      background: rgba(255, 255, 255, 0.12);
+      transform: translateY(-2px);
+      border-color: #e5cfb3;
+    }
+    .card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+    }
+    .card-date {
+      font-size: 0.8rem;
+      color: #e5cfb3;
+      margin-top: 2px;
+      text-align: left;
+    }
+    .arrow {
+      color: #e5cfb3;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Invitaciones Web</h1>
+    <p class="sub">Alejandro Torres Fotografía</p>
+    
+    <div class="cards-list">
+      <a href="xv-lupita/" class="card-link">
+        <div>
+          <div class="card-title">XV Lupita García</div>
+          <div class="card-date">10 . Octubre . 2026</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="xv-camila/" class="card-link">
+        <div>
+          <div class="card-title">XV Camila Hernández</div>
+          <div class="card-date">24 . Octubre . 2026</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="xv-kimberly/" class="card-link">
+        <div>
+          <div class="card-title">XV Kimberly González</div>
+          <div class="card-date">05 . Diciembre . 2026</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
