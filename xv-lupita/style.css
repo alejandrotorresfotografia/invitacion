@@ -44,6 +44,116 @@ body {
     radial-gradient(circle at 90% 80%, rgba(197, 147, 132, 0.08) 0%, transparent 40%);
 }
 
+/* Pantalla de Bienvenida / Sobre Interactivo */
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #fffdfb 0%, #f6ebeb 100%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.welcome-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.envelope-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 44px 28px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(184, 107, 107, 0.2);
+  border: 1px solid var(--color-border);
+  position: relative;
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.wax-seal {
+  width: 68px;
+  height: 68px;
+  margin: -68px auto 16px;
+  background: radial-gradient(circle at 35% 35%, #e28d92, var(--color-blush-deep));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(138, 63, 76, 0.35);
+  border: 2px solid #ffffff;
+}
+
+.wax-seal span {
+  font-family: var(--font-serif);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.welcome-subtitle {
+  font-family: var(--font-serif);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+
+.welcome-title {
+  font-family: var(--font-script);
+  font-size: 3.8rem;
+  color: var(--color-blush-dark);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.welcome-desc {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.open-invitation-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 28px;
+  background: linear-gradient(135deg, var(--color-blush), var(--color-blush-dark));
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(184, 107, 107, 0.35);
+  transition: all 0.3s ease;
+}
+
+.open-invitation-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 28px rgba(184, 107, 107, 0.45);
+}
+
 /* Contenedor central optimizado para móviles */
 .main-wrapper {
   max-width: 520px;

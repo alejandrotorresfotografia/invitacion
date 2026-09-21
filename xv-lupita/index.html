@@ -19,7 +19,23 @@
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+  <!-- Pantalla de Bienvenida / Apertura de Sobre para reproducir música con el clic -->
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="envelope-card">
+      <div class="wax-seal">
+        <span>XV</span>
+      </div>
+      <p class="welcome-subtitle">Nuestra Quinceañera</p>
+      <h2 class="welcome-title">Lupita</h2>
+      <p class="welcome-desc">Te invitamos a celebrar este momento tan especial</p>
+      <button class="open-invitation-btn" id="openInvitationBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+        Abrir Invitación
+      </button>
+    </div>
+  </div>
 
   <!-- Contenedor de pétalos flotantes animados -->
   <div class="petals-container"></div>

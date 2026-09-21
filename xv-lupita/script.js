@@ -85,40 +85,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   reveals.forEach(el => revealObserver.observe(el));
 
-  // 4. AUDIO DE FONDO
+  // 4. PANTALLA DE BIENVENIDA Y AUDIO DE FONDO
   const bgAudio = document.getElementById('bgAudio');
   const musicToggle = document.getElementById('musicToggle');
+  const welcomeScreen = document.getElementById('welcomeScreen');
+  const openInvitationBtn = document.getElementById('openInvitationBtn');
   let isPlaying = false;
+
+  function playMusic() {
+    if (bgAudio) {
+      bgAudio.play().then(() => {
+        if (musicToggle) musicToggle.classList.add('playing');
+        isPlaying = true;
+      }).catch(err => {
+        console.log('Audio autoplay prevented:', err);
+      });
+    }
+  }
+
+  function pauseMusic() {
+    if (bgAudio) {
+      bgAudio.pause();
+      if (musicToggle) musicToggle.classList.remove('playing');
+      isPlaying = false;
+    }
+  }
+
+  if (openInvitationBtn && welcomeScreen) {
+    openInvitationBtn.addEventListener('click', () => {
+      welcomeScreen.classList.add('hidden');
+      playMusic();
+    });
+  }
 
   if (musicToggle && bgAudio) {
     musicToggle.addEventListener('click', () => {
       if (isPlaying) {
-        bgAudio.pause();
-        musicToggle.classList.remove('playing');
-        musicToggle.setAttribute('title', 'Reproducir música');
-        isPlaying = false;
+        pauseMusic();
       } else {
-        bgAudio.play().then(() => {
-          musicToggle.classList.add('playing');
-          musicToggle.setAttribute('title', 'Pausar música');
-          isPlaying = true;
-        }).catch(err => {
-          console.log('Audio autoplay prevented:', err);
-        });
+        playMusic();
       }
     });
-
-    // Intentar reproducir en el primer clic de usuario en la pantalla si aún no suena
-    const firstInteractionHandler = () => {
-      if (!isPlaying) {
-        bgAudio.play().then(() => {
-          musicToggle.classList.add('playing');
-          isPlaying = true;
-        }).catch(() => {});
-      }
-      document.removeEventListener('click', firstInteractionHandler);
-    };
-    document.addEventListener('click', firstInteractionHandler, { once: true });
   }
 
   // 5. MODAL DE CONFIRMACIÓN POR WHATSAPP
