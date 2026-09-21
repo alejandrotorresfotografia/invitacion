@@ -189,8 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const guestCount = document.getElementById('guestCount').value;
       const guestNote = document.getElementById('guestNote').value.trim();
 
-      // Mismo número de WhatsApp de confirmaciones
-      const phoneNumber = "526393989687";
+      // Número de WhatsApp para confirmaciones de Camila
+      const phoneNumber = "526481090337";
 
       let message = `¡Hola! Confirmo mi respuesta para los XV de Camila Hernández:\n\n`;
       message += `• *Nombre:* ${guestName}\n`;
