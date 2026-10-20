@@ -186,8 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const guestCount = document.getElementById('guestCount').value;
       const guestNote = document.getElementById('guestNote').value.trim();
 
-      // Teléfono de confirmación (WhatsApp de la familia)
-      const phoneNumber = "526393989687";
+      // Teléfono de confirmación (Familia de Michelle: +52 639 465 4007)
+      const phoneNumber = "526394654007";
 
       let message = `¡Hola! Confirmo mi respuesta para los XV de Michelle Ariana Rodríguez Chaparro:\n\n`;
       message += `• *Nombre:* ${guestName}\n`;
